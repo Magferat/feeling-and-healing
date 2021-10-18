@@ -15,8 +15,9 @@ function App() {
           <Route path="/home" > <HomeMain /> </Route>
           <Route path="/login" > <Login /> </Route>
           <Route path='/register' > <Registration /></Route>
-          <Route path="/" > <HomeMain /> </Route>
           <Route exact path="*" > <NotFond /> </Route>
+          <Route path="/" > <HomeMain /> </Route>
+
         </Switch>
 
 
