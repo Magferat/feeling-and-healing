@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
-import '../CSS/custom.css'
-// import useFirebase from './Hooks/useFirebase';
+import useFirebase from '../../Hooks/useFirebase';
+// import '../CSS/custom.css'
+import '../CSS/custom.css';
 
 const Registration = () => {
 
     const { handleUserEmail, handleUserPass, handleUserName,
-        userRegistration } = useFirebase();
+        newUserCreate } = useFirebase();
 
     return (
         <div className="row container mx-auto mt-2 login-bg text-white ">
             <h2 className="text-center mt-5">Welcome to Feeling & Healing </h2>
 
             <form
-                onSubmit={userRegistration}
+                onSubmit={newUserCreate}
                 className=" p-5">
                 {/* <div className="row mb-3">
                     <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>

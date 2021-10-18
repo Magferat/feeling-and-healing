@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useFirebase from '../../Hooks/useFirebase';
 import '../CSS/custom.css'
-// import useFirebase from './Components//Hooks/useFirebase';
-// import useFirebase from './Compone/Hooks/useFirebase';
+
 
 const Login = () => {
-    const { signInUsingGoogle, signInManually, handleUserEmail,
+    const { googleLogIn, logInManually, handleUserEmail,
         handleUserPass } = useFirebase();
 
 
@@ -17,12 +16,12 @@ const Login = () => {
             <h2 className="text-center mt-5">Welcome to Feeling & Healing </h2>
 
             <div className="container ">
-                <button onClick={signInUsingGoogle}>Google Sign In</button>
+                <button onClick={googleLogIn}>Google Sign In</button>
 
 
             </div>
             <form
-                onSubmit={signInManually}
+                onSubmit={logInManually}
                 className=" p-5">
                 <div className="row mb-3">
                     <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>

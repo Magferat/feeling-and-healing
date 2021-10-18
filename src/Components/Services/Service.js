@@ -15,7 +15,7 @@ const Service = (props) => {
                     <div className="card-body">
                         <h5 className="title-color ">{name}</h5>
                         <small className=" font-monospace"> {dis1}</small><br />
-                        <small><Link class='title-color'> Read More <i className="fas fa-arrow-right"></i> </Link> </small>
+                        <small><Link className='title-color'> Read More <i className="fas fa-arrow-right"></i> </Link> </small>
 
                         {/* onClick={login} */}
                     </div>

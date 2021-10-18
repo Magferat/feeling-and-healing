@@ -1,113 +1,110 @@
+import { useEffect, useState } from 'react'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, } from "firebase/auth";
 
-import { useState } from "react";
-import { useEffect } from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import initializeAuthentication from "../Components/Firebase/Firebase.init";
+import initializeAuthentication from '../Components/Firebase/Firebase.init'
 
 
-initializeAuthentication();
+initializeAuthentication()
 const googleProvider = new GoogleAuthProvider();
 
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLogin, setIsLogin] = useState(false);
 
-    const [error, setError] = useState('');
 
-    const auth = getAuth()
+    const auth = getAuth();
 
-    const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                console.log(result.user);
-                setUser(result.user);
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
-
-    // const handleSubmission = e => {
-    //     e.preventDefault();
-    // }
-    const handleUserName = e => {
-        setName(e.target.value);
-
-    }
     const handleUserEmail = e => {
         setEmail(e.target.value);
-
     }
     const handleUserPass = e => {
         setPassword(e.target.value);
-
     }
-
-    const userRegistration = e => {
+    const newUserCreate = e => {
         e.preventDefault();
-        console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user
+                // Signed in 
+                const user = result.user;
                 console.log(user);
-                // setUser(user);
+                setUser(user);
+
             })
-            .catch(error => {
-                setError(error.message);
-            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+
+            });
 
 
     }
-
-    const signInManually = e => {
+    const logInManually = e => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
+                // Signed in 
                 const user = result.user;
                 console.log(user);
-                // setUser(user);
-                // setError('');
+                setUser(user);
             })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+            });
     }
 
-    const toogleForLogin = e => {
+    const googleLogIn = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
 
-        setIsLogin(e.target.checked);
+                const user = result.user;
+                setUser(user);
+                console.log(user)
+                // ...
+            }).catch((error) => {
+
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+
+            });
+
+
     }
 
     const logOut = () => {
         signOut(auth)
             .then(() => {
+                // Sign-out successful.
                 setUser({});
             })
+            .catch((error) => {
+                console.log(error);
+            });
     }
-
     useEffect(() => {
-        onAuthStateChanged(auth, user => {
+        onAuthStateChanged(auth, (user) => {
             if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
                 setUser(user);
+                // ...
             }
-        })
+        });
     }, [auth]);
-
     return {
         user,
-        error,
-
-        handleUserEmail,
-        handleUserPass,
-        handleUserName,
-        userRegistration,
-        signInUsingGoogle,
-        signInManually,
-        toogleForLogin,
-        isLogin,
-        logOut
+        logOut,
+        newUserCreate, handleUserEmail, handleUserPass,
+        logInManually,
+        googleLogIn
     }
-}
 
+
+
+}
 export default useFirebase;

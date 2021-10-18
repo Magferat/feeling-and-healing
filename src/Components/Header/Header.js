@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useFirebase from '../../Hooks/useFirebase';
+// import useFirebase from '../../Hooks/useFirebase';
 import '../CSS/custom.css'
 // import useFirebase from './Components//Hooks/useFirebase';
 
@@ -36,7 +37,9 @@ const Header = () => {
                         </li>
                         {
                             user?.email && <li className="list m-2 ">
-                                <button onClick={logOut}>log out</button>
+                                <button
+                                    onClick={logOut}
+                                >log out</button>
                             </li>
                         }
 
