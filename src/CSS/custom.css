@@ -1,0 +1,83 @@
+.nav-img {
+    width: 50px;
+}
+.nav-bg {
+    background-color: rgb(5, 108, 95);
+}
+.link-style{
+    text-decoration: none;
+   
+    color: white;
+    font-weight: 500;
+}
+.link-style:hover {
+    color: orangered;
+}
+.list {
+    list-style: none;
+}
+ /* Styles of Banner  */
+ .banner-img {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://image.freepik.com/free-vector/human-nervous-system_53876-90445.jpg");
+     
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+  .title-1 {
+    color: white;
+    font-weight: 500;
+  }
+  .title-2 {
+    font-weight: 900;
+    color: white;
+  }
+  .title-3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+  }
+
+  
+
+/* Style Of LogIn Page  */
+
+
+.login-bg {
+ background-color: #f8a683;   
+}
+
+/* Style of Service Cards  */
+.service-style{
+    width: 15rem;
+    /* border: 1px solid rgb(5, 108, 95); */
+    box-shadow: 2px 2px 2px 3px linen;
+    
+}
+.service-style:hover {
+    background-color:#f8a683 ;
+    box-shadow: 15px 15px rgb(5, 108, 95) ;
+}
+.card-style:hover {
+background-color:#f8a683 ;
+color: white;
+
+}
+
+.title-color {
+    color: rgb(5, 108, 95);
+    text-decoration: none;
+    font-weight: 900;
+}
+/* Styles of Abiut Us */
+.shad {
+    box-shadow: 25px 25px  #f8a683 ;
+}
