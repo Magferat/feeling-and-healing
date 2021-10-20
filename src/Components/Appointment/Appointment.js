@@ -3,7 +3,8 @@ import React from 'react';
 const Appointment = () => {
     return (
         <div className="d-flex row flex-lg-row my-5 px-2 flex-sm-column justify-content-lg-center">
-            <div className="container col-sm">
+            <h1 className="text-info text-center">Make An Appointment!</h1>
+            <div className="container mt-3 col-sm">
                 <h1 className="title-color">Hello, You Need consultation?</h1>
                 <p className="font-monospace">
                     The Mission of the Feeling & Heeling is to help adults, children and families grow stronger by finding mental balance, building life, and coping skills and improving overall wellbeing.

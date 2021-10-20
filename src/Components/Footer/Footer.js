@@ -29,11 +29,11 @@ const Footer = () => {
                     <span className="border-bottom border-light fw-5">NAVIGATE</span>
                     <br />
                     <Link className="link-style" to="/home">Home</Link> <br />
-                    <Link className="link-style" to="/about">About Us</Link> <br />
-                    <Link className="link-style" to="/sirvices">Our Sirvices</Link> <br />
-                    <Link className="link-style" to="/intern">Applay For InternShip</Link>
-                    <Link className="link-style" to="/appointment">Make An A</Link>
-                    <Link className="link-style" to="/contact">Contact Us</Link>
+                    <Link className="link-style" to="/home#about">About Us</Link> <br />
+                    <Link className="link-style" to="/home#sirvices">Our Sirvices</Link> <br />
+                    <Link className="link-style" to="/intern">Applay For InternShip</Link><br />
+                    <Link className="link-style" to="/appointment">Make An A</Link> <br />
+                    <Link className="link-style" to="/contact">Contact Us</Link> <br />
                 </div>
             </div>
             <div className="row text-white border-top border-light pt-2 text-center">

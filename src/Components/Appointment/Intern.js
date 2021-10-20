@@ -4,7 +4,9 @@ const Intern = () => {
     return (
         <div>
             <div className="d-flex row my-5 px-2 flex-sm-column flex-lg-row justify-content-lg-center">
-                <div className="container ms-2 col-sm">
+                <h1 className="text-info text-center">Apply For Internship!</h1>
+
+                <div className="container ms-2 mt-3 col-sm">
                     <h1 className="title-color">STUDENT INTERNSHIP PROGRAM
                     </h1>
                     <p className="font-monospace">

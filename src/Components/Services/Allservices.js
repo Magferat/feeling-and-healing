@@ -8,18 +8,11 @@ const Allservices = () => {
 
 
     useEffect(() => {
-        fetch('./data.JSON')
+        fetch('./data.json')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
-    // test(services);
-
-    // const test = (props) => {
-    //     props.map(dio => console.log(dio))
-    // }
-
-    // test(services);
 
 
     return (

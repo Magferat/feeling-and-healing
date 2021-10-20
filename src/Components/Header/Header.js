@@ -14,36 +14,36 @@ const Header = () => {
 
 
         <>
-            <nav class="row navbar navbar-expand-lg nav-bg mx-0 pe-3">
-                <div class="container-fluid">
+            <nav className="row navbar navbar-expand-lg nav-bg mx-0 pe-3">
+                <div className="container-fluid">
                     <div className="col container d-flex">
 
                         <img src="https://cdn-icons-png.flaticon.com/512/1787/1787077.png" className="img-fluid nav-img ms-3 mt-1" alt="" />
-                        <span className="text-warning mt-2 fs-4 fw-bolder">Feeling &
+                        <span className="text-warning font-monospace mt-2 fs-4 fw-bolder">Feeling &
                             Healing</span>
 
                     </div>
-                    <button class="navbar-toggler bg-light ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-sliders-h"></i>
-                        {/* <span class="navbar-toggler-icon "></span> */}
+                    <button className="navbar-toggler bg-light ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <i className="fas fa-sliders-h"></i>
+                        {/* <span className="navbar-toggler-icon "></span> */}
                     </button>
-                    <div class="collapse navbar-collapse col" id="navbarTogglerDemo01">
+                    <div className="collapse navbar-collapse col" id="navbarTogglerDemo01">
 
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item list m-2">
+                        <ul className="navbar-nav  ms-auto mb-2 mb-lg-0">
+                            <li className="nav-item list m-2">
                                 <HashLink to="/home" className="link-style"> Home
                                 </HashLink>
                             </li>
-                            <li class="nav-item list m-2">
+                            <li className="nav-item list m-2">
                                 <HashLink to="/home#about" className="link-style">About</HashLink>
                             </li>
-                            <li class="nav-item list m-2">
+                            <li className="nav-item list m-2">
                                 <HashLink to="/home#services" className="link-style">Services</HashLink>
                             </li>
-                            <li class="nav-item list m-2">
+                            <li className="nav-item list m-2">
                                 <HashLink to="/appointment" className="link-style">Appointment</HashLink>
                             </li>
-                            <li class="nav-item list m-2">
+                            <li className="nav-item list m-2">
                                 <HashLink to="/intern" className="link-style">Internship</HashLink>
                             </li>
 
