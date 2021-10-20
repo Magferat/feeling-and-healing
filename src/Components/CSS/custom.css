@@ -6,7 +6,6 @@
 }
 .link-style{
     text-decoration: none;
-   
     color: white;
     font-weight: 500;
 }
@@ -28,9 +27,7 @@
     background-position: center;
     position: relative;
   }
-  body {
-    overflow-x: hidden;
-  }
+  
   
   .title-1 {
     color: white;
@@ -81,3 +78,14 @@ color: white;
 .shad {
     box-shadow: 25px 25px  #f8a683 ;
 }
+.footerStyle {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* padding-top: 20px; */
+  color: honeydew;
+  padding: 20px;
+}
+.fas {
+  font-size: 18px;
+  }
