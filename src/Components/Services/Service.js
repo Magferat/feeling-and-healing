@@ -7,7 +7,7 @@ const Service = (props) => {
     const { img, name, dis1, id } = props.service;
     return (
         <>
-            <div className="container p-0 mt-5 service-style " >
+            <div className="container row p-0 mt-5 mx-3 service-style " >
                 <div className="card col h-100 border-0 text-center card-style" >
                     <img src={img} className="img-fluid w-50 mt-4  mx-auto rounded-circle" alt="item" />
                     <div className="card-body">

@@ -7,7 +7,7 @@ import '../CSS/custom.css';
 const Registration = () => {
 
     const { handleUserEmail, handleUserPass,
-        newUserCreate } = useAuth();
+        newUserCreate, userName, error } = useAuth();
 
     return (
         <div className="row container mx-auto mt-2 login-bg text-white mb-5 ">
@@ -16,7 +16,11 @@ const Registration = () => {
             <form
                 onSubmit={newUserCreate}
                 className=" p-5">
-
+                <div className="row mb-3 ">
+                    <label htmlFor="inputName" className="col-sm-2 col-form-label p-1">Name</label>
+                    <div className="col-sm-10">
+                        <input type="text" onBlur={userName} className="form-control w-75" id="inputName" placeholder="Your Name" />
+                    </div></div>
                 <div className="row mb-3">
                     <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
                     <div className="col-sm-10">
@@ -33,8 +37,15 @@ const Registration = () => {
                         <input
                             onBlur={handleUserPass}
                             type="password" className="form-control w-75"
-                            placeholder="your password" id="inputPassword3" required />
+                            placeholder="Follow the instractions" id="inputPassword3" required />
                     </div>
+                    <h6>{error}</h6>
+                    <p className="text-dark">
+                        *Need at least two uppercase letters. <br />
+                        *Need at least one special case letter.<br />
+                        *Need at least two digits.<br />
+                        *Need at least three lowercase letters. <br />
+                    </p>
                 </div>
 
                 <div className="row mb-3">

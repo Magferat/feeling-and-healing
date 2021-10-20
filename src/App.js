@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Appointment from './Components/Appointment/Appointment';
+import Intern from './Components/Appointment/Intern';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import HomeMain from './Components/Home/HomeMain';
@@ -22,7 +24,8 @@ function App() {
             <PrivateRoute path="/Service/:serviceId">
               <DetailedService></DetailedService>
             </PrivateRoute>
-
+            <PrivateRoute path="/appointment"><Appointment /> </PrivateRoute>
+            <PrivateRoute path="/intern"> <Intern /></PrivateRoute>
             <Route path='/register' > <Registration /></Route>
             <Route exact path="/" > <HomeMain /> </Route>
             <Route path="*" > <NotFond /> </Route>

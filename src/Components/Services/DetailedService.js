@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import '../CSS/custom.css'
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
-// import { Link } from 'react-router-dom';
-// import { useState } from 'react/cjs/react.development';
+
 
 const DetailedService = () => {
 
@@ -21,8 +20,7 @@ const DetailedService = () => {
     }, [serviceDetails])
 
     let details = serviceDetails.find(detail => detail.id == serviceId)
-    // const display = details;
-    console.log(details);
+
 
 
     return (
